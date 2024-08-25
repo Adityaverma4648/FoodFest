@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*  removing default css */
+li{
+   list-style: none;
+   margin: 0px 1rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/*  pagge specific global  */
+
+
+.page{
+    width: 100vw;
+    height: 300vh;
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+
+
+
+/*  navbar global */
+
+.nav{
+    /* background-color: rgb(44, 72, 110); */
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.nav-logo{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*  landing */
+.home-landing{
+    height: 100vh;
+    width: 100%;
+    background: url("../img/sky_bg.avif");
+    background-repeat: no-repeat;
+    color: white;
+}
