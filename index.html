@@ -19,7 +19,7 @@
     <nav class="nav">
       <div class="nav-logo"><a href="/"> FoodFest </a></div>
 
-      <div class="container">
+      <div class="container nav-links-container">
         <li><a href="/"> Home </a></li>
         <li><a href="/explore.html"> Explore </a></li>
         <li><a href="./orders"> Orders</a></li>
@@ -27,14 +27,34 @@
         <li><a href="/services">Services</a></li>
         <li><a href="/register" class="nav-button">Sign In</a></li>
       </div>
+
+      <button type="button" class="burger-menu" onclick="showMenu()">
+        <div class="burger-bars-half"></div>
+        <div class="burger-bars"></div>
+        <div class="burger-bars"></div>
+      </button>
+
+      </button>
     </nav>
+
+    <div class="menu">
+      <div class="menu-links-container">
+        <li><a href="/"> Home </a></li>
+        <li><a href="/explore.html"> Explore </a></li>
+        <li><a href="./orders"> Orders</a></li>
+        <li><a href="/favourites.html">Favourites</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/register" class="nav-button">Sign In</a></li>
+      </div>
+    </div>
+
     <section class="home-landing">
       <div class="text-container container">
         <div class="heading">
-          <span style="color: yellow">MODERN</span>DELIVREY
+          <span style="color: yellow">MODERN</span><span class="masked-text">DELIVREY</span>
         </div>
 
-        <div class="para">Bringing The Best Food At Your Doorstep!</div>
+        <div class="para">Helps Bringing The <span style="color: yellow;font-size : 23px">Best Food</span> At Your <span style="color: yellow;font-size : 23px">Doorstep!</span></div>
 
         <div>
           <input type="text" class="input" placeholder="Eg: Bhilai , INDIA" />
@@ -44,47 +64,96 @@
     </section>
 
     <section class="home-features container">
-      <div class="card">
-        <div class="icon-circle"></div>
-        <div class="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-          deleniti magnam facilis nostrum culpa nihil ex, saepe aliquid
-          reprehenderit asperiores a harum accusamus!
+      <div class="container-80">
+        <div class="card">
+          <div class="icon-circle"></div>
+          <div>
+            <div class="heading">Easy To Order</div>
+            <div class="para">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              deleniti magnam facilis nostrum culpa nihil ex.
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="icon-circle"></div>
-        <div class="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-          deleniti magnam facilis nostrum culpa nihil ex, saepe aliquid
-          reprehenderit asperiores a harum accusamus!
+        <div class="card">
+          <div class="icon-circle"></div>
+          <div>
+            <div class="heading">Fastest Delivery</div>
+            <div class="para">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              deleniti magnam facilis nostrum culpa nihil ex.
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="icon-circle"></div>
-        <div class="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-          deleniti magnam facilis nostrum culpa nihil ex, saepe aliquid
-          reprehenderit asperiores a harum accusamus!
+        <div class="card">
+          <div class="icon-circle"></div>
+          <div>
+            <div class="heading">Best quality</div>
+            <div class="para">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              deleniti magnam facilis nostrum culpa nihil ex.
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="home-special-dishes">
-      <div>
-        <div>Our Special Dishes</div>
-        <div>
+      <div class="text-container">
+        <div class="heading">Our Special Dishes</div>
+        <div class="para">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
           ad incidunt quam quae.
         </div>
       </div>
 
-      <div class="dish-card">
+      <div class="dish-card-container"></div>
 
-      </div>
+      <a href="/explore.html" class="explore-button">Explore</a>
+    </section>
+
+
+
+    <section class="customer_review">
+         <div class="container-80 container">
+          <div class="img">
+            <img src="../img/customer.png" alt="customer_img">
+            <div class="img_svg"></div>
+          </div>
+          <div class="text-container">
+            <div class="heading">What Our Customers Has To Say About Us!</div>
+            <div class="reviews">
+             
+              <div class="para"></div>
+              <div class="rating"></div>
+              
+            </div>
+            <div class='slider-button-container'> 
+              <button class="slider-button prev" onclick="previousReview()">&#10094;</button>
+              <button class="slider-button next" onclick="nextReview()">&#10095;</button>
+            </div>
+            
+          </div>
+         </div>
+    </section>
+
+    <section class="join_us">
+        <div class="container-80">
+          <div class="text-container">
+            <div class="heading">
+              Join Us As A Member Using An Email
+            </div>
+            <div>
+              <input type="text" class="input input-text" placeholder="Join Us As A Member Using Email">
+              <input type="submit" class="button" placeholder="Email" value="Email" >
+            </div>
+          </div>
+        </div>
     </section>
     <!--  script files -->
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="./scripts/review.js"></script>
+    <script src="./scripts/resNav.js"></script>
 
     <!-- Include Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>

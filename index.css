@@ -1,14 +1,14 @@
+/* Base styles */
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-/*  removing default css */
 li {
   list-style: none;
-  margin: 0px 1rem;
+  margin: 0 1rem;
 }
 
 a {
@@ -20,25 +20,44 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/*  pagge specific global  */
-
 .page {
   width: 100vw;
-  height: 300vh;
+  height: auto;
   background-color: rgb(34, 34, 34);
   color: white;
 }
 
-/*  navbar global */
+.heading {
+  font-size: 23px;
+  font-weight: 500;
+  color: white;
+}
+
+.para {
+  font-size: 16px;
+  color: rgb(175, 175, 175);
+}
+
+.button {
+  background-color: yellow;
+  font-size: smaller;
+  padding: 10px 1rem;
+  border-radius: 5px;
+  color: black;
+}
+
+.container-80 {
+  height: 100%;
+  width: 80%;
+}
 
 .nav {
-  /* background-color: rgb(44, 72, 110); */
   width: 100%;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 10px;
+  padding: 0 10px;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,13 +77,20 @@ body::-webkit-scrollbar {
   color: black;
 }
 
+.burger-menu {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*  landing */
 .home-landing {
   height: 100vh;
   width: 100%;
@@ -82,7 +108,6 @@ body::-webkit-scrollbar {
 }
 
 .home-landing .text-container {
-  /* background-color: red; */
   position: absolute;
   height: 100vh;
   width: 90vw;
@@ -103,15 +128,26 @@ body::-webkit-scrollbar {
   margin-left: 10px;
 }
 
+.masked-text {
+  font-weight: bold;
+  background: url("./img/pizza.avif") no-repeat center center;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
 .home-landing input {
   width: 30vw;
   height: 60px;
-  padding: 10px 10px;
+  padding: 10px;
   user-select: text;
   outline: none;
-  border: 0px;
+  border: 0;
   border-radius: 5px;
-  margin: 10px 10px;
+  margin: 10px;
   background: yellow;
 }
 
@@ -119,7 +155,6 @@ body::-webkit-scrollbar {
   width: 50vw;
   height: 100vh;
   display: block;
-  /* background-color: black; */
   position: absolute;
   background-color: transparent;
   right: 0;
@@ -131,7 +166,14 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: black;
+}
+
+.home-features .container-80 {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .home-features .card {
@@ -139,11 +181,11 @@ body::-webkit-scrollbar {
   width: 25%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: white;
   border-radius: 5px;
   padding: 10px;
+  text-align: center;
 }
 
 .home-features .card .icon-circle {
@@ -151,4 +193,396 @@ body::-webkit-scrollbar {
   width: 100px;
   background-color: yellow;
   border-radius: 50%;
+}
+
+.home-special-dishes {
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.home-special-dishes .text-container {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-special-dishes .dish-card-container {
+  height: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.dish-card {
+  width: 400px;
+  height: 30vh;
+  background-color: yellow;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dish-card img {
+  width: 110%;
+  position: relative;
+  display: hidden;
+}
+
+.explore-button {
+  background-color: yellow;
+  font-size: smaller;
+  width: 15vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+}
+
+.customer_review {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  position: relative;
+}
+
+.customer_review .img {
+  min-width: 25vw;
+  /* background-color: brown; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer_review .img img{
+  z-index: 99;
+}
+
+.customer_review .text-container {
+  position: relative;
+  /* background-color: blue; */
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.reviews .para {
+  padding: 10px;
+}
+
+.reviews .rating {
+  margin-top: 5px;
+}
+
+.slider-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-button.prev {
+  left: 0;
+}
+
+.slider-button.next {
+  right: 0;
+}
+
+.img_svg{
+  background-color: yellow;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.join_us {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join_us .container-80 {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)
+    ),
+    url("./img/join_us.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.join_us input {
+  border: 0px;
+}
+
+.join_us .input-text {
+  width: 40vw;
+  height: 2.5rem;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+/* Media Queries for Responsiveness */
+
+/* For devices with width 1200px and below */
+@media (max-width: 1200px) {
+  .home-landing .heading {
+    font-size: 150px;
+  }
+
+  .home-landing input {
+    width: 40vw;
+  }
+
+  .home-features .card {
+    width: 30%;
+  }
+}
+
+/* For devices with width 992px and below */
+@media (max-width: 992px) {
+  .home-landing .heading {
+    font-size: 100px;
+  }
+
+  .home-landing .para {
+    font-size: 16px;
+  }
+
+  .home-landing input {
+    width: 50vw;
+  }
+
+  .home-features .card {
+    width: 40%;
+  }
+
+  .home-special-dishes {
+    width: 100%;
+    height: auto;
+    /* background-color: red; */
+  }
+
+  .dish-card-container {
+    width: 90%;
+    /* background-color: rgb(25, 0, 255); */
+  }
+
+  .dish-card img {
+    width: auto;
+    height: 100%;
+  }
+
+  .dish-card {
+    width: 300px;
+  }
+
+  .explore-button {
+    width: 20vw;
+  }
+
+  .slider-button {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* For devices with width 768px and below */
+@media (max-width: 768px) {
+  .home-landing .heading {
+    font-size: 80px;
+  }
+
+  .home-landing .para {
+    font-size: 14px;
+  }
+
+  .home-landing input {
+    width: 70vw;
+  }
+
+  .home-features .card {
+    width: 60%;
+  }
+
+  .home-special-dishes .text-container {
+    height: 10%;
+  }
+
+  .dish-card {
+    width: 250px;
+  }
+
+  .explore-button {
+    width: 25vw;
+  }
+}
+
+/* For devices with width 576px and below */
+@media (max-width: 576px) {
+  .animation {
+    width: 80vw;
+  }
+
+  .nav .nav-links-container {
+    display: none;
+  }
+
+  .menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    /* background-color: aquamarine; */
+  }
+
+  .menu li {
+    width: 90vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .burger-menu {
+    height: 60px;
+    width: 60px;
+    /* margin: 1.5rem; */
+    display: block;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  .burger-bars-half {
+    position: relative;
+    background-color: yellow;
+    width: 1.25rem;
+    height: 5px;
+    margin: 1px 0px;
+    border-radius: 5px;
+  }
+
+  .burger-bars {
+    position: relative;
+    background-color: yellow;
+    width: 2.5rem;
+    height: 5px;
+    margin: 1px 0px;
+    border-radius: 5px;
+  }
+
+  .home-landing .heading {
+    font-size: 50px;
+  }
+  .home-features {
+    height: auto;
+  }
+
+  .home-features .container-80 {
+    flex-direction: column;
+  }
+
+  .home-landing .para {
+    font-size: 12px;
+  }
+
+  .home-landing input {
+    width: 80vw;
+  }
+
+  .home-features .card {
+    width: 80%;
+  }
+
+  .home-special-dishes .text-container {
+    height: 20%;
+    text-align: center;
+  }
+
+  .dish-card {
+    width: 400px;
+  }
+
+  .explore-button {
+    width: 30vw;
+  }
+
+  .customer_review .img {
+    display: none;
+  }
+
+  .join_us .container-80 {
+    width: 90%;
+  }
 }
